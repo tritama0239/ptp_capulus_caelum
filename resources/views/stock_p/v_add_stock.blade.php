@@ -49,7 +49,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="{{url('/pegawai/barang/viewstock') }}">Stock Now</a></li>
-                            <li><a class="dropdown-item" href="{{url('/pegawai/barang/viewstock1') }}">Stock In</a></li>
+                            <li><a class="dropdown-item" href="{{url('/pegawai/barang/addstock') }}">Stock In</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

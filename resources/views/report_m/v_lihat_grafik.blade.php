@@ -86,7 +86,7 @@
             </tr>
             </form>
             <br />
-                <a href="/manager/transaksi/viewreport" class="btn btn-success refresh" data-toggle="tooltip" title="Print" style="background-color: #CBAB8F" > [ Refresh ]  </i></a>
+                <a href="/manager/transaksi/viewgrafik" class="btn btn-success refresh" data-toggle="tooltip" title="Print" style="background-color: #CBAB8F" > [ Refresh ]  </i></a>
                 <a href="/manager/transaksi/viewreport/export2/" class="btn btn-success" data-toggle="tooltip" title="Print" style="background-color: #CBAB8F" > [ Print ]  </i></a>
             <table class="table table-hover">
             <th>Code</th>
