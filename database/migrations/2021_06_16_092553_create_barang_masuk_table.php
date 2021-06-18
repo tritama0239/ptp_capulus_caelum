@@ -15,9 +15,11 @@ class CreateBarangMasukTable extends Migration
     {
         Schema::create('barang_masuk', function (Blueprint $table) {
             $table->bigIncrements('id_brg_in');
-            $table->unsignedBigInteger('id_brg')->index()->foreign('id_brg')->references('id_brg')->on('barang')->onUpdate('cascade')->onDelete('restrict');
+            $table->unsignedBigInteger('id_brg')->index();
             $table->integer('stok_in');
             $table->timestamps();
+
+            $table->foreign('id_brg')->references('id_brg')->on('barang')->onUpdate('cascade')->onDelete('restrict');
         });
     }
 

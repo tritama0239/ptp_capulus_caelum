@@ -71,7 +71,7 @@ class ManagerController extends Controller
         $biaya = [];
 
         foreach($Transaksi as $rp){
-            $bulan[] = $rp->bulan->format('M');;
+            $bulan[] = $rp->bulan->format('M');
             $data[] = $rp->modal;
             $biaya[] = $rp->pemasukkan;
 
