@@ -29,7 +29,7 @@
         <div class="container">   
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/pegawai')}}"><img src="{{ asset('image/logo1.png') }}" alt="" width="20%" height="20%"/></a>
+                        <a class="nav-link" href="{{ Auth::user()->level }}"><img src="{{ asset('image/logo1.png') }}" alt="" width="20%" height="20%"/></a>
                     </li>
 
                     <li class="nav-item">

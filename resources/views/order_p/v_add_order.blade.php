@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-        <title>Order | Capulus Caelum</title>
+        <title>Pegawai | Capulus Caelum</title>
         <style>
         body{
             background-image: url(image/bg2.png);
@@ -21,8 +21,6 @@
         }
          
         </style>
-
-        
     </head>
 
     <body class="antialiased">
@@ -31,7 +29,7 @@
         <div class="container">   
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/pegawai')}}"><img src="{{ asset('image/logo1.png') }}" alt="" width="20%" height="20%"/></a>
+                        <a class="nav-link" href="{{ Auth::user()->level }}"><img src="{{ asset('image/logo1.png') }}" alt="" width="20%" height="20%"/></a>
                     </li>
 
                     <li class="nav-item">
@@ -47,12 +45,11 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Goods
+                            Stok Barang
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="{{url('/pegawai/barang/viewstock1') }}">Stock Now</a></li>
-                            <li><a class="dropdown-item" href="{{url('/pegawai/barang/viewstock') }}">Stock In</a></li>
-                            <li><a class="dropdown-item" href="{{url('/pegawai/barang/viewstock2') }}">Stock Out</a></li>
+                            <li><a class="dropdown-item" href="{{url('/pegawai/barang/viewstock') }}">Stock Now</a></li>
+                            <li><a class="dropdown-item" href="{{url('/pegawai/barang/viewstock1') }}">Stock In</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -85,7 +82,7 @@
                     <div class="col-md-6">
 
                         <div class="form-group">
-                            <input type="hidden" class="form-control" name="name" id="name" value="{{ Auth::user()->name }}" readonly>
+                            <input type="hidden" class="form-control" name="id" id="id" value="{{ Auth::user()->id }}" readonly>
                         </div>
 
                         <div class="form-group">
@@ -116,7 +113,7 @@
 
                         <div class="form-group">
                             <label for="" class="font-weight-bold">Total Harga</label>
-                            <input type="number" class="form-control" name="total_hrg" id="total_hrg" value="{{ $p->hrg_jsat }}*{{ $p->hrg_jsat }}" readonly>
+                            <input type="number" class="form-control" name="total_hrg" id="total_hrg">
                         </div>
                     </div><br>
                     
